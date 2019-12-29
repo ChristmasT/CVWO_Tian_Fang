@@ -10,5 +10,31 @@
   <%= @task.description %>
 </p>
 
+
+<h2>Tags</h2>
+<% @task.tags.each do |tag| %>
+  <p>
+    <strong>Tagname:</strong>
+    <%= tag.tagname %>
+  </p>
+
+<% end %>
+
+<h2>Add a tag:</h2>
+<% @tag = @task.tags.create %>
+<%= form_for @tag do |form| %>
+
+  <p>
+    <%= form.label :tagname %><br>
+    <%= form.text_area :tagname %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Back', tasks_path %> |
+<%= link_to 'Tags', tags_path %>
