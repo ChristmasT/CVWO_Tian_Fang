@@ -26,11 +26,8 @@ class TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
 
-    # tryout
+    # @task = Task.find(task_params[:task_id])
 
-    # @task = Task.find(params[:task_id])
-    # use 'if' to identify whether we should create a new tag.
-    # ##################################
 
     respond_to do |format|
       if @tag.save
@@ -77,4 +74,6 @@ class TagsController < ApplicationController
     def tag_params
       params.require(:tag).permit(:tagname)
     end
+
+
 end
