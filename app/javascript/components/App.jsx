@@ -18,7 +18,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    Axios.get("https://tftaskmanager.herokuapp.com/tasks").then(res =>
+    Axios.get("https://tian-fang-taskmanager.herokuapp.com/tasks").then(res =>
       this.setState({
         tasks: res.data
       })
@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   addTask = (title, description, tags, due) => {
-    Axios.post("https://tftaskmanager.herokuapp.com/tasks", {
+    Axios.post("https://tian-fang-taskmanager.herokuapp.com/tasks", {
       title,
       description,
       tags,
@@ -40,7 +40,7 @@ class App extends React.Component {
   };
 
   delTask = id => {
-    Axios.delete("https://tftaskmanager.herokuapp.com/tasks/${id}").then(res =>
+    Axios.delete("https://tian-fang-taskmanager.herokuapp.com/tasks/${id}").then(res =>
       this.setState({
         tasks: [...this.state.tasks.filter(task => task.id !== id)]
       })
@@ -48,7 +48,7 @@ class App extends React.Component {
   };
 
   updateTask = (id, title, description, tags, completed, due) => {
-    Axios.put("https://tftaskmanager.herokuapp.com/tasks/${id}", {
+    Axios.put("https://tian-fang-taskmanager.herokuapp.com/tasks/${id}", {
       title,
       description,
       tags,
