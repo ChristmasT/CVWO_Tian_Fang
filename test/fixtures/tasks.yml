@@ -3,7 +3,13 @@
 one:
   title: MyString
   description: MyText
+  completed: false
+  due: 2020-02-08 18:26:32
+  tags: MyString
 
 two:
   title: MyString
   description: MyText
+  completed: false
+  due: 2020-02-08 18:26:32
+  tags: MyString
