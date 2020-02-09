@@ -40,7 +40,9 @@ class App extends React.Component {
   };
 
   delTask = id => {
-    Axios.delete("https://tian-fang-taskmanager.herokuapp.com/tasks/${id}").then(res =>
+    Axios.delete(
+      "https://tian-fang-taskmanager.herokuapp.com/tasks/${id}"
+    ).then(res =>
       this.setState({
         tasks: [...this.state.tasks.filter(task => task.id !== id)]
       })
