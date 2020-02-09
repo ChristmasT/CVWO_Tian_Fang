@@ -10,7 +10,7 @@ import Tasks from "./Tasks";
 import NewTask from "./NewTask";
 import ViewTask from "./ViewTask";
 import EditTask from "./EditTask";
-import "bootstrap/dist/css/bootstrap.css";
+import "./bootstrap.css";
 
 class App extends React.Component {
   state = {

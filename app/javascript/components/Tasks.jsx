@@ -1,6 +1,6 @@
 import React from "react";
 import TaskItem from "./TaskItem";
-import "bootstrap/dist/css/bootstrap.css";
+import "./bootstrap.css";
 
 class Tasks extends React.Component {
   state = {
