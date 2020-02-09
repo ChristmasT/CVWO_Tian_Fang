@@ -41,7 +41,7 @@ class App extends React.Component {
 
   delTask = id => {
     Axios.delete(
-      "https://tian-fang-taskmanager.herokuapp.com/tasks/${id}"
+      `https://tian-fang-taskmanager.herokuapp.com/tasks/${id}`
     ).then(res =>
       this.setState({
         tasks: [...this.state.tasks.filter(task => task.id !== id)]
@@ -50,7 +50,7 @@ class App extends React.Component {
   };
 
   updateTask = (id, title, description, tags, completed, due) => {
-    Axios.put("https://tian-fang-taskmanager.herokuapp.com/tasks/${id}", {
+    Axios.put(`https://tian-fang-taskmanager.herokuapp.com/tasks/${id}`, {
       title,
       description,
       tags,
